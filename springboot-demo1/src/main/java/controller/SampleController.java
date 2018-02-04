@@ -18,7 +18,6 @@ public class SampleController {
 
     public static void main(String[] args)
     {
-        SpringApplication.run(SampleControll
-                er.class, args);
+        SpringApplication.run(SampleController.class, args);
     }
 }
