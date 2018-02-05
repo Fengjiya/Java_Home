@@ -1,11 +1,11 @@
-<%--
+<%@ page import="java.util.HashSet" %><%--
   Created by IntelliJ IDEA.
   User: AcidCarrion
   Date: 2018/2/5
   Time: 21:35
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java"  errorPage="error.jsp" %>
 <html>
 <head>
   <title>Caipinglan Demo</title>
@@ -32,7 +32,7 @@ HelloWorld! 欢迎学习JavaWeb知识:</br></br>
 
 <%=count++%>
 <%
-    out.println( info() );
+    out.printdln( info() );
 %>
 </body>
 </html>
