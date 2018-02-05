@@ -18,7 +18,7 @@ HelloWorld! 欢迎学习JavaWeb知识:</br></br>
     for (int i = 0; i < 5; i++) {
         out.println("<font size='" + i + "'>");
 %>
-疯狂Java训练营 再次修改第二次(Wild Java Camp)</font><br/>
+疯狂Java训练营 (Wild Java Camp)</font><br/>
 <%}%>
 </body>
 </html>
