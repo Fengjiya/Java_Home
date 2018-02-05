@@ -15,10 +15,24 @@ HelloWorld! 欢迎学习JavaWeb知识:</br></br>
 <%out.println(new java.util.Date());%></br>
 <br/>
 <%
-    for (int i = 0; i < 5; i++) {
+    for (int i = 0; i < 10; i++) {
         out.println("<font size='" + i + "'>");
 %>
 疯狂Java训练营 (Wild Java Camp)</font><br/>
 <%}%>
+<%--我是JSP注释部分--%>
+<!--我是HTML注释-->
+<%!
+    public int count = 0;
+    public String info()
+    {
+        return "我是时间: " + new java.util.Date();
+    }
+%>
+
+<%=count++%>
+<%
+    out.println( info() );
+%>
 </body>
 </html>
