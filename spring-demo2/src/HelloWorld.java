@@ -1,0 +1,24 @@
+public class HelloWorld {
+    private String name;
+
+    public HelloWorld()
+    {
+        System.out.println("This is class constructor");
+    }
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+        System.out.println("This is name setter");
+
+    }
+
+    public void sayHello()
+    {
+        System.out.println("This is function: say");
+        System.out.println("Hello" + name);
+
+    }
+}
