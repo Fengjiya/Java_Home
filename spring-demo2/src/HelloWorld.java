@@ -1,3 +1,6 @@
+import org.springframework.stereotype.Component;
+
+@Component
 public class HelloWorld {
     private String name;
 
@@ -5,6 +8,12 @@ public class HelloWorld {
     {
         System.out.println("This is class constructor");
     }
+
+    public HelloWorld(String name)
+    {
+        this.name = name;
+    }
+
     public String getName() {
         return name;
     }
@@ -17,7 +26,7 @@ public class HelloWorld {
 
     public void sayHello()
     {
-        System.out.println("This is function: say");
+        System.out.println("This is functon: say");
         System.out.println("Hello" + name);
 
     }

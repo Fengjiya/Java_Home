@@ -32,7 +32,7 @@ HelloWorld! 欢迎学习JavaWeb知识:</br></br>
 
 <%=count++%>
 <%
-    out.printdln( info() );
+    out.println( info() );
 %>
 </body>
 </html>
