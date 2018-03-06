@@ -1,4 +1,4 @@
-package fengjiya.cai.demo;
+package com.fengjiya.demo;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -11,6 +11,7 @@ public class DemoApplicationTests {
 
 	@Test
 	public void contextLoads() {
+		System.out.println("我是测试类");
 	}
 
 }

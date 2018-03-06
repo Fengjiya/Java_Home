@@ -1,0 +1,6 @@
+server:
+  port: 9090
+girl:
+  cupSize: B
+  age: 18
+  desc: "cupSize: ${cupSize}, age: ${age}"
