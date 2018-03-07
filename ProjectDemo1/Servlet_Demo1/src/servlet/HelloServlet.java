@@ -28,6 +28,7 @@ public class HelloServlet extends HttpServlet {
         response.setContentType("text/html; charset=utf-8");
         out.println("Helle Serdavlet!<br>");
         out.println("Helle Servlet!<br>");
+        out.println("Helle Servfdalet!<br>");
     }
 
     @Override
