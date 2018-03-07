@@ -1,9 +1,8 @@
 package fengjiya.cai.demo;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * @ProjectName: springboot-demo2
@@ -19,7 +18,6 @@ import org.springframework.web.bind.annotation.RestController;
  */
 
 @RestController
-@RequestMapping("hi")
 public class HelloController {
 
     @Autowired
@@ -35,13 +33,27 @@ public class HelloController {
 //    private String desc;
 
 //    @RequestMapping(value = "say")
-    @GetMapping("abc")
-    public String index()
+//    @GetMapping(value = "/girls")
+    @RequestMapping(value = "hello", method = RequestMethod.GET)
+    public String say()
     {
 //        return "Hello World!  罩杯: " + cupSize + " 年龄: " + age;
 //        return desc;
-        return girlProperties.getCupSize();
+        return "index";
+//        return girlProperties.getCupSize();
     }
+
+//    public String girlAdd(@RequestParam("cupSize") String cupSize,
+//                          @RequestParam("age") int age)
+//    {
+//        Girl girl = new Girl();
+//        girl.setCupSize(cupSize);
+//        girl.setAge(age);
+//
+//        return "jdk";
+//
+//
+//    }
 
 
 }
