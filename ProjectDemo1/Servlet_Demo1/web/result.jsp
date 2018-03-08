@@ -14,7 +14,7 @@
 <body>
 我是查询结果<br>
 <%
-    System.out.println("开始在结果页面输出...");
+    System.out.println("开始在结果页面输出.....");
     List<String> listt = (List<String>) request.getAttribute("list");
     String st = "";
     for (int i = 0; i < listt.size(); i++) {
