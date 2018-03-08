@@ -13,10 +13,33 @@
   <body>
   <h1>第一个Servlet小例子</h1>
   <hr>
-  <a href="servlet/helloServlet">Get方式请求HelloServlet</a><br>
+  <a href="servlet/helloServlet">Get方式请求HelloServlet</a><br><br>
 
   <form action="servlet/helloServlet" method="post">
-      <input type="submit" value="POST方式请求">
+      <input type="submit" value="POST方式请求"><br><br>
+
+    <table style="width: 400px; border-color: blueviolet", border="1">
+      <tr>
+        <td >名称</td>
+        <td >洲际</td>
+        <td >人口数量</td>
+      </tr>
+
+        <tr>
+            <td>城市选择</td>
+            <td>
+                <select name="aaa" style="width: 100%">
+                    <option value="one">北京</option>
+                    <option value="two">上海</option>
+                    <option value="three">深圳</option>
+
+                </select>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+
+    </table>
   </form>
   <br>我叫XXX，正在学习Servlet
   </body>

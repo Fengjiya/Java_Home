@@ -30,18 +30,19 @@ public class HelloServlet extends HttpServlet {
         PrintWriter out = response.getWriter();
         response.setContentType("text/html; charset=utf-8");
         out.println("Helle Serdavlet!<br>");
-        out.println("Helle Servlet!<br>");
-        out.println("Helle Servfdalet!<br>");
-        out.println("Helle Servfdalet!<br>");
     }
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         System.out.println("处理Post请求...");
 //        super.doPost(request, response);
-        PrintWriter out = response.getWriter();
-        response.setContentType("text/html; charset=utf-8");
-        out.println("Helle Servalet!<br>");
+//        PrintWriter out = response.getWriter();
+//        response.setContentType("text/html; charset=utf-8");
+//        out.println("Helle Servalet!<br>");
+
+//        response.sendRedirect("result.jsp");
+//        request.getRequestDisatcher("result.jsp");
+        request.getRequestDispatcher("/result.jsp").forward(request,response);
     }
 }
 
