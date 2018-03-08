@@ -20,7 +20,7 @@
     for (int i = 0; i < listt.size(); i++) {
         st = st + listt.get(i) + ", ";
     }
-    out.println("城市列表：" + st);
+    out.println("城市列表：" + st);  //此处不可以使用System.out.println
 
 %>
 </body>
