@@ -13,9 +13,9 @@
   <body>
   <h1>第一个Servlet小例子</h1>
   <hr>
-  <a href="servlet/HelloServlet">Get方式请求HelloServlet</a><br>
+  <a href="servlet/helloServlet">Get方式请求HelloServlet</a><br>
 
-  <form action="servlet/HelloServlet" method="post">
+  <form action="servlet/helloServlet" method="post">
       <input type="submit" value="POST方式请求">
   </form>
   <br>我叫XXX，正在学习Servlet
