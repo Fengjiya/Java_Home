@@ -1,5 +1,7 @@
 package servlet;
 
+import service.CityService;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -7,6 +9,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.sql.SQLException;
+import java.util.List;
 
 /**
  * @ProjectName: Servlet_Demo1
@@ -42,6 +46,14 @@ public class HelloServlet extends HttpServlet {
 
 //        response.sendRedirect("result.jsp");
 //        request.getRequestDisatcher("result.jsp");
+        List<String> list = null;
+        try {
+            list = (new CityService()).getCityList();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        System.out.println("开始输出前五个城市名称："+ list);
+        request.setAttribute("list", list);
         request.getRequestDispatcher("/result.jsp").forward(request,response);
     }
 }
