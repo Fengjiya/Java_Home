@@ -14,13 +14,9 @@
 <body>
 我是查询结果<br>
 <%
-    System.out.println("开始在结果页面输出.....");
-    List<String> listt = (List<String>) request.getAttribute("list");
-    String st = "";
-    for (int i = 0; i < listt.size(); i++) {
-        st = st + listt.get(i) + ", ";
-    }
-    out.println("城市列表：" + st);  //此处不可以使用System.out.println
+    System.out.println("在结果页面开始输出.....");
+//    List<String> st = (List<String>) request.getAttribute("list");
+    out.println("城市列表：" + (String)request.getAttribute("list"));  //此处不可以使用System.out.println
 
 %>
 </body>

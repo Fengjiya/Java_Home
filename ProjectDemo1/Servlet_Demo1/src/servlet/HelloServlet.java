@@ -39,22 +39,22 @@ public class HelloServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         System.out.println("处理Post请求...");
-//        super.doPost(request, response);
-//        PrintWriter out = response.getWriter();
-//        response.setContentType("text/html; charset=utf-8");
-//        out.println("Helle Servalet!<br>");
-
-//        response.sendRedirect("result.jsp");
-//        request.getRequestDisatcher("result.jsp");
         List<String> list = null;
         try {
             list = (new CityService()).getCityList();
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        System.out.println("开始输出前五个城市名称："+ list);
-        request.setAttribute("list", list);
+
+        String st = "";
+        for (int i = 0; i < list.size(); i++) {
+            st = st + list.get(i) + ", ";
+        }
+        System.out.println("doPost开始输出前五个城市名称："+ st);
+
+        request.setAttribute("list", st);
         request.getRequestDispatcher("/result.jsp").forward(request,response);
+//        request.getRequestDispatcher("/index.jsp").forward(request,response);
     }
 }
 
