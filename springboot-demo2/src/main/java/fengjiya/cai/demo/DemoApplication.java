@@ -7,7 +7,11 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class DemoApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(DemoApplication.class, args);
+
+		SpringApplication app = new SpringApplication(DemoApplication.class);
+		app.run(args);
+
+//		SpringApplication.run(DemoApplication.class, args);
 		System.out.println("\n我就做个实验\n");
 	}
 }

@@ -28,9 +28,8 @@ import java.util.List;
 @WebServlet(name = "helloServlet", urlPatterns = "/servlet/helloServlet")
 public class HelloServlet extends HttpServlet {
     @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
         System.out.println("处理Get请求...");
-//        super.doGet(request, response);
         PrintWriter out = response.getWriter();
         response.setContentType("text/html; charset=utf-8");
         out.println("Helle Seravlet!<br>");
