@@ -50,7 +50,7 @@ public class HelloServlet extends HttpServlet {
         for (int i = 0; i < list.size(); i++) {
             st = st + list.get(i) + ", ";
         }
-        System.out.println("doPost开始输出前五个城市名称："+ st);
+        System.out.println("doPost开始输出前五个城市名称 ："+ st);
 
         request.setAttribute("list", st);
         request.getRequestDispatcher("/result.jsp").forward(request,response);
